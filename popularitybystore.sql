@@ -1,0 +1,14 @@
+SELECT category, COUNT(rental_id) AS times_of_renting
+  FROM
+  (SELECT r.rental_id, f.film_id, f.title, c.name AS category
+  FROM rental r
+  JOIN inventory i
+  ON r.inventory_id = i.inventory_id
+  JOIN film f
+  ON i.film_id = f.film_id
+  JOIN film_category fc
+  ON fc.film_id = f.film_id
+  JOIN category c
+  ON c.category_id = fc.category_id) sub
+  GROUP BY 1
+  ORDER BY 2 DESC;
