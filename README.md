@@ -1,5 +1,5 @@
 # sqlproject
-SQL project on DVA rental shop
+SQL project on DVD rental shop
 This is my work on the Udacity Nanodegree program - Programming for Data Science with Python
 This is the first project on SQL.
 
